@@ -1,0 +1,762 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.talently {
+  width: 100%;
+  min-width: 100vw;
+  position: relative;
+  min-height: 100vh;
+
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    .hero {
+      @include flexCenter;
+      width: 100%;
+      position: relative;
+
+      .heroContent {
+        @include flexCenterCol;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-left: 1px dashed rgba(255, 255, 255, 0.2);
+        border-right: 1px dashed rgba(255, 255, 255, 0.2);
+        position: relative;
+        gap: 8rem;
+        min-height: 100vh;
+        padding: 20rem 0 0;
+        position: relative;
+        overflow: visible;
+        z-index: 1;
+
+        .heroTop {
+          @include flexBetween;
+          width: 100%;
+          gap: 2.4rem;
+          padding: 0 4rem;
+
+          .heading {
+            @include flexStartCol;
+            width: 100%;
+            gap: 2rem;
+
+            h1 {
+              @include h1;
+              width: 55%;
+            }
+
+            p {
+              @include paragraph;
+              width: 35%;
+            }
+          }
+        }
+
+        .marqueeWrapper {
+          @include flexCenter;
+          width: 100%;
+          gap: 1.6rem;
+          mask-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgb(0, 0, 0) 12.5%,
+            rgb(0, 0, 0) 87.5%,
+            rgba(0, 0, 0, 0) 100%
+          );
+
+          .heroTestimonial {
+            @include flexBetweenCol;
+            border-radius: 24px;
+            width: max-content;
+            max-width: 412px;
+            min-height: 323px;
+            margin-right: 1.6rem;
+            background-color: $white-4;
+            padding: 2rem;
+            gap: 2.8rem;
+            flex-shrink: 0;
+
+            .clientInfoContainer {
+              @include flexCenter;
+              width: 100%;
+              gap: 1.4rem;
+
+              img {
+                border-radius: 1000px;
+                width: 64px;
+                height: 64px;
+                object-fit: cover;
+                object-fit: top;
+                flex-shrink: 0;
+              }
+
+              .clientInfoText {
+                @include flexStartCol;
+                width: 100%;
+                gap: 0.4rem;
+
+                h5 {
+                  @include h5;
+                }
+
+                p {
+                  @include paragraph-sm($white);
+                }
+              }
+            }
+
+            > p {
+              @include paragraph;
+              white-space: wrap;
+            }
+
+            .clientCompany {
+              @include flexCenter;
+              width: 100%;
+              gap: 1.4rem;
+
+              .left {
+                @include flexCenter;
+                width: 100%;
+                gap: 1.2rem;
+                justify-content: flex-start;
+
+                img {
+                  width: auto;
+                  height: 30px;
+                }
+
+                h5 {
+                  @include h5;
+                }
+              }
+
+              .rating {
+                @include flexEndCol;
+                width: 100%;
+                gap: 1.6rem;
+                h2 {
+                  @include h2;
+                }
+
+                p {
+                  @include paragraph-sm($p-sm-text-dark3);
+                }
+              }
+            }
+          }
+        }
+
+        .heroGlow {
+          position: absolute;
+          bottom: 108px;
+          right: -311px;
+          transform: rotate(-15deg);
+          filter: blur(100px);
+          width: 1500px;
+          height: 405px;
+          background-color: rgba(54, 94, 255, 0.7);
+          z-index: -1;
+        }
+      }
+    }
+
+    .process {
+      width: 100%;
+      position: relative;
+
+      .processContent {
+        @include flexStartCol;
+        width: 100%;
+        padding: 20rem 0 10rem;
+        gap: 4rem;
+
+        .sectionTop {
+          @include flexBetween;
+          justify-content: flex-end;
+          width: 100%;
+          gap: 1.6rem;
+
+          .left {
+            @include flexStartCol;
+            width: 100%;
+            gap: 1.6rem;
+
+            .heading {
+              @include flexStartCol;
+              width: 100%;
+              gap: 0.8rem;
+
+              p {
+                @include paragraph-xs-gradient;
+              }
+
+              h2 {
+                @include h2;
+                width: 50%;
+              }
+            }
+
+            > p {
+              @include paragraph;
+              width: 40%;
+            }
+          }
+        }
+
+        .processSwiperContainer {
+          @include flexStartCol;
+          width: 100%;
+          gap: 1.5rem;
+        }
+        .swiper {
+          width: 100%;
+
+          .processCard {
+            @include flexStartCol;
+            width: 100%;
+            gap: 2rem;
+            border-radius: 20px;
+            background-color: $white-4;
+            border: 1px solid $white-1;
+            padding: 3.2rem;
+
+            .top {
+              @include flexStartCol;
+              width: 100%;
+              gap: 0.8rem;
+
+              p {
+                @include paragraph-xxs-gradient;
+              }
+              h3 {
+                @include h3;
+              }
+            }
+
+            > p {
+              @include paragraph-sm($p-sm-text-dark3);
+            }
+          }
+        }
+
+        .navigation {
+          @include flexEnd;
+          width: 100%;
+          gap: 1rem;
+
+          .arrow {
+            @include flexCenter;
+            width: 40px;
+            height: 40px;
+            border-radius: 1000px;
+            background-color: $primary-500;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .recruiting {
+      width: 100%;
+      position: relative;
+
+      .recruitingContent {
+        @include flexStartCol;
+        width: 100%;
+        padding: 10rem 0;
+        gap: 4rem;
+
+        .sectionTop {
+          @include flexBetween;
+          justify-content: flex-end;
+          width: 100%;
+          gap: 1.6rem;
+
+          .left {
+            @include flexStartCol;
+            width: 100%;
+            gap: 1.6rem;
+
+            .heading {
+              @include flexStartCol;
+              width: 100%;
+              gap: 0.8rem;
+
+              p {
+                @include paragraph-xs-gradient;
+              }
+
+              h2 {
+                @include h2;
+                width: 50%;
+              }
+            }
+
+            > p {
+              @include paragraph;
+              width: 40%;
+            }
+          }
+        }
+
+        .recruitingFeaturesGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+  align-items: center;
+
+  .featuresAccordionContainer {
+    @include flexStartCol;
+    width: 100%;
+    gap: 2.4rem;
+
+    .featureAccordionItem {
+      cursor: pointer;
+      @include flexStartCol;
+      width: 100%;
+      gap: 0.8rem;
+
+      h3 {
+        @include h3;
+        padding: 0.6rem 0;
+        transition: color 0.3s ease;
+      }
+
+      .answer {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        transition: grid-template-rows 0.45s ease, opacity 0.3s ease;
+        opacity: 0;
+
+        p {
+          overflow: hidden;
+          @include paragraph-sm($gray-300, left);
+        }
+      }
+
+      &.active {
+
+        .answer {
+          grid-template-rows: 1fr;
+          opacity: 1;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: $white-1;
+    }
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: fadeImage 0.45s ease;
+    }
+  }
+}
+
+@keyframes fadeImage {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+      }
+    }
+
+    .roles {
+      width: 100%;
+      position: relative;
+
+      .rolesContent {
+        @include flexCenterCol;
+        width: 100%;
+        padding: 10rem 0;
+        gap: 4rem;
+
+        .sectionTop {
+          @include flexCenterCol;
+          width: 100%;
+          gap: 1.6rem;
+
+          .heading {
+            @include flexCenterCol;
+            width: 100%;
+            gap: 0.8rem;
+
+            p {
+              @include paragraph-xs-gradient;
+            }
+
+            h2 {
+              @include h2;
+              width: 50%;
+              text-align: center;
+            }
+          }
+
+          > p {
+            @include paragraph;
+            width: 40%;
+            text-align: center;
+          }
+        }
+
+        .featuredRoles {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 1.6rem;
+
+          .featuredRoleCard {
+            @include flexBetweenCol;
+            width: 100%;
+            min-height: 328px;
+            border-radius: 16px;
+            padding: 2.8rem;
+            gap: 1rem;
+            background-color: $white-4;
+            border: 1px solid $white-1;
+
+            .featuredRoleInfo {
+              @include flexStartCol;
+              width: 100%;
+              gap: 1.4rem;
+
+              .companyInfo {
+                @include flexBetween;
+                width: 100%;
+                gap: 1.4rem;
+
+                .left {
+                  @include flexCenter;
+                  width: 100%;
+                  gap: 1.4rem;
+
+                  .companyLogo {
+                    @include flexCenter;
+                    width: 52px;
+                    height: 52px;
+                    border-radius: 1000px;
+                    background-color: $white-1;
+                    flex-shrink: 0;
+
+                    img {
+                      width: 100%;
+                      max-width: 29px;
+                      max-height: 36px;
+                      height: 100%;
+                    }
+                  }
+
+                  h4 {
+                    @include h4;
+                  }
+                }
+
+                .featuredChip {
+                  @include flexCenter;
+                  background-color: rgba(121, 137, 217, 0.08);
+                  border-radius: 1000px;
+                  padding: 0.8rem 1.2rem;
+
+                  p {
+                    @include paragraph-xxs-gradient;
+                  }
+                }
+              }
+
+              .divider {
+                width: 100%;
+                height: 1px;
+                background-color: $white-1;
+              }
+
+              .roleInfo {
+                @include flexStartCol;
+                width: 100%;
+                gap: 0.4rem;
+
+                h5 {
+                  @include h5;
+                }
+
+                p {
+                  @include paragraph($p-text-gray);
+                }
+              }
+            }
+
+            .action {
+              @include flexCenterCol;
+              width: 100%;
+              gap: 1.2rem;
+
+              p {
+                @include paragraph-sm-center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .testimonial {
+      width: 100%;
+      position: relative;
+
+      .testimonialContent {
+        @include flexCenterCol;
+        width: 100%;
+        padding: 10rem 0;
+        gap: 4rem;
+
+        .sectionTop {
+          @include flexCenterCol;
+          width: 100%;
+          gap: 1.6rem;
+
+          .heading {
+            @include flexCenterCol;
+            width: 100%;
+            gap: 0.8rem;
+
+            p {
+              @include paragraph-xs-gradient;
+            }
+
+            h2 {
+              @include h2;
+              width: 40%;
+              text-align: center;
+            }
+          }
+
+          > p {
+            @include paragraph;
+            width: 40%;
+            text-align: center;
+          }
+        }
+
+        .testimonialContainer {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1.6rem;
+
+          .testimonialCard {
+            @include flexBetweenCol;
+            border-radius: 24px;
+            width: 100%;
+            min-height: 323px;
+            margin-right: 1.6rem;
+            background-color: $white-4;
+            padding: 2rem;
+            gap: 2.8rem;
+            flex-shrink: 0;
+            border: 1px solid $white-1;
+
+            .clientInfoContainer {
+              @include flexCenter;
+              width: 100%;
+              gap: 1.4rem;
+
+              img {
+                border-radius: 1000px;
+                width: 64px;
+                height: 64px;
+                object-fit: cover;
+                object-fit: top;
+                flex-shrink: 0;
+              }
+
+              .clientInfoText {
+                @include flexStartCol;
+                width: 100%;
+                gap: 0.4rem;
+
+                h5 {
+                  @include h5;
+                }
+
+                p {
+                  @include paragraph-sm($white);
+                }
+              }
+            }
+
+            > p {
+              @include paragraph;
+              white-space: wrap;
+            }
+
+            .clientCompany {
+              @include flexCenter;
+              width: 100%;
+              gap: 1.4rem;
+
+              .left {
+                @include flexCenter;
+                width: 100%;
+                gap: 1.2rem;
+                justify-content: flex-start;
+
+                img {
+                  width: auto;
+                  height: 30px;
+                }
+
+                h5 {
+                  @include h5;
+                }
+              }
+
+              .rating {
+                @include flexEndCol;
+                width: 100%;
+                gap: 1.6rem;
+                h2 {
+                  @include h2;
+                }
+
+                p {
+                  @include paragraph-sm($p-sm-text-dark3);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .recruiters {
+      width: 100%;
+      position: relative;
+
+      .recruitersContent {
+        @include flexCenterCol;
+        width: 100%;
+        padding: 10rem 0;
+        gap: 4rem;
+
+        .sectionTop {
+          @include flexCenterCol;
+          width: 100%;
+          gap: 1.6rem;
+
+          .heading {
+            @include flexCenterCol;
+            width: 100%;
+            gap: 0.8rem;
+
+            p {
+              @include paragraph-xs-gradient;
+            }
+
+            h2 {
+              @include h2;
+              width: 50%;
+              text-align: center;
+            }
+          }
+
+          > p {
+            @include paragraph;
+            width: 40%;
+            text-align: center;
+          }
+        }
+
+        .featuredRecruiters {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 1.6rem;
+
+          .featuredRecruiterCard {
+            @include flexStartCol;
+            width: 100%;
+            border-radius: 16px;
+            padding: 2.8rem;
+            gap: 2.8rem;
+            background-color: $white-4;
+            border: 1px solid $white-1;
+
+            .top {
+              @include flexCenter;
+              width: 100%;
+              justify-content: flex-start;
+              gap: 1.4rem;
+
+              img {
+                width: 64px;
+                height: 64px;
+                object-fit: cover;
+                border-radius: 1000px;
+              }
+
+              .clientInfo {
+                @include flexStartCol;
+                width: 100%;
+                gap: 0.4rem;
+
+                h5 {
+                  @include h5;
+                }
+
+                p {
+                  @include paragraph-xxs($gray-300);
+                }
+              }
+            }
+
+            .recruiterBackground {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              gap: 1.4rem;
+
+              .recruiterBgInfo {
+                @include flexCenterCol;
+                width: 100%;
+                gap: 0.4rem;
+
+                h4 {
+                  @include h4;
+                }
+
+                p {
+                  @include paragraph-sm($gray-300, center);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
