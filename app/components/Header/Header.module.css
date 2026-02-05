@@ -36,12 +36,18 @@
   margin: 0 auto;
 }
 .header .headerContent > a {
-  font-weight: 600;
-  font-size: 2rem;
-  color: #f5f5f5;
   font-family: var(--font-plus-jakarta-sans);
+  font-size: 2rem;
+  font-weight: 600;
   letter-spacing: -0.06em;
   line-height: 1.1em;
+  color: #f5f5f5;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.25s ease, letter-spacing 0.25s ease, transform 0.25s ease;
+}
+.header .headerContent > a:hover {
+  color: #d9d9d9;
 }
 .header .headerContent nav {
   display: flex;
@@ -56,7 +62,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  gap: 2.2rem;
 }
 .header .headerContent nav ul li a {
   font-weight: 400;

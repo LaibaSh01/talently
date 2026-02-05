@@ -188,7 +188,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.process}`}>
+        <section id="process" className={`${styles.process}`}>
           <div className="container">
             <div className={styles.processContent}>
               <div className={styles.sectionTop}>
@@ -209,10 +209,10 @@ export default function Home() {
                 modules={[Navigation]}
                 spaceBetween={15}
                 slidesPerView={2}
-                speed={1000}
-                resistanceRatio={0.85}
-                touchRatio={1.2}
-                onBeforeInit={(swiper) => {
+                // speed={1000}
+                // resistanceRatio={0.85}
+                // touchRatio={1.2}
+                 onBeforeInit={(swiper) => {
                   swiper.params.navigation.prevEl = prevRef.current;
                   swiper.params.navigation.nextEl = nextRef.current;
                 }}
@@ -296,7 +296,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.recruiting}`}>
+        <section id="recruiting" className={`${styles.recruiting}`}>
           <div className="container">
             <div className={styles.recruitingContent}>
               <div className={styles.sectionTop}>
@@ -355,7 +355,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.roles}`}>
+        <section id="roles" className={`${styles.roles}`}>
           <div className="container">
             <div className={styles.rolesContent}>
               <div className={styles.sectionTop}>
@@ -460,7 +460,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.testimonial}`}>
+        <section id="testimonials" className={`${styles.testimonial}`}>
           <div className="container">
             <div className={styles.testimonialContent}>
               <div className={styles.sectionTop}>
@@ -578,7 +578,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.recruiters}`}>
+        <section id="recruiters" className={`${styles.recruiters}`}>
           <div className="container">
             <div className={styles.recruitersContent}>
               <div className={styles.sectionTop}>

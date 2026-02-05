@@ -10,15 +10,15 @@ export default function Footer() {
           <div className={styles.linksGrid}>
                <ul>
             <li>
-              <Link href="/">About</Link>
+              <Link href="#process">Process</Link>
             </li>
 
             <li>
-              <Link href="/">Roles</Link>
+              <Link href="#roles">Roles</Link>
             </li>
 
             <li>
-              <Link href="/">Hiring</Link>
+              <Link href="#recruiters">Recruiters</Link>
             </li>
           </ul>
 

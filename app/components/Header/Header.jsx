@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Header.module.scss";
+import Button from "../ui/Button/Button";
 
 export default function Header() {
   return (
@@ -10,24 +11,28 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <Link href="/">About</Link>
+              <Link href="#process">Process</Link>
             </li>
 
             <li>
-              <Link href="/">Roles</Link>
+              <Link href="#recruiting">Recruiting</Link>
             </li>
 
             <li>
-              <Link href="/">Hiring</Link>
+              <Link href="#roles">Roles</Link>
             </li>
 
             <li>
-              <Link href="/">Blog</Link>
+              <Link href="#testimonials">Testimonials</Link>
+            </li>
+
+            <li>
+              <Link href="#recruiters">Recruiters</Link>
             </li>
           </ul>
         </nav>
 
-        <button className={styles.darkBtn}>Get in touch</button>
+        <Button>Get in touch</Button>
       </div>
     </header>
   );

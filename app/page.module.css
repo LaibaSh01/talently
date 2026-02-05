@@ -506,7 +506,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  gap: 0.8rem;
 }
 .talently .main .recruiting .recruitingContent .recruitingFeaturesGrid .featuresAccordionContainer .featureAccordionItem h3 {
   font-family: var(--font-plus-jakarta-sans);
@@ -516,7 +515,7 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
-  padding: 0.6rem 0;
+  padding: 0.6rem 0 2.4rem;
   transition: color 0.3s ease;
 }
 .talently .main .recruiting .recruitingContent .recruitingFeaturesGrid .featuresAccordionContainer .featureAccordionItem .answer {

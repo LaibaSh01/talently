@@ -21,12 +21,7 @@
     margin: 0 auto;
 
     > a {
-      font-weight: 600;
-      font-size: 2rem;
-      color: $gray-100;
-      font-family: $font-primary;
-      letter-spacing: -0.06em;
-      line-height: 1.1em;
+      @include logo(2rem);
     }
 
     nav {
@@ -36,7 +31,7 @@
 
       ul {
         @include flexCenter;
-        gap: 1.6rem;
+        gap: 2.2rem;
 
         li {
           a {

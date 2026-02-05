@@ -141,6 +141,31 @@
   color: $color;
 }
 
+@mixin logo(
+  $size,
+  $color: $gray-100,
+  $hover-color: $gray-200
+) {
+  font-family: $font-primary;
+  font-size: $size;
+  font-weight: $fw-semibold;
+  letter-spacing: -0.06em;
+  line-height: 1.1em;
+  color: $color;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: 
+    color 0.25s ease,
+    letter-spacing 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+
 @mixin flexStart {
   display: flex;
   flex-direction: row;
