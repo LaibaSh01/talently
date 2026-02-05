@@ -1,0 +1,33 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+.btn {
+  border-radius: 10px;
+  width: min-content;
+  height: min-content;
+  padding: 1.2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: $dark-900;
+  color: $gray-100;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: $font-inter;
+  letter-spacing: -0.04em;
+  line-height: 1.1em;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.primary {
+  background: $primary-500;
+}
+
+.fullWidth {
+  width: 100%;
+}

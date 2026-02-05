@@ -1,0 +1,72 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.footer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .footerContent {
+    @include flexStartCol;
+    width: 100%;
+    gap: 8rem;
+    padding: 0 4rem;
+
+    .mainContent {
+      @include flexBetween;
+      width: 100%;
+      gap: 1rem;
+
+      > a {
+        font-size: 11.2rem;
+        font-weight: 600;
+        font-family: $font-primary;
+        letter-spacing: -0.06em;
+        line-height: 1.1em;
+        color: $gray-100;
+      }
+
+      .linksGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3.4rem;
+
+           ul {
+        @include flexStartCol;
+        gap: 1.6rem;
+
+        li {
+          a {
+            font-weight: 600;
+            font-size: 1.65rem;
+            color: $gray-100;
+            font-family: $font-primary;
+            letter-spacing: -0.06em;
+            line-height: 1.1em;
+          }
+        }
+      }
+      }
+    }
+
+    > p{
+        width: 100%;
+        @include paragraph-sm($gray-300, center);
+        padding: 2rem 0;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+    }
+  }
+
+  .footerGlow {
+    width: 1107px;
+    height: 277px;
+    position: absolute;
+    transform: rotate(7deg);
+    filter: blur(100px);
+    left: -126px;
+    bottom: -200px;
+              background-color: rgba(54, 94, 255, 0.7);
+  }
+}

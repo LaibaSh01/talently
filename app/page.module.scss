@@ -12,6 +12,32 @@
     min-height: 100vh;
     overflow: hidden;
 
+    .darkBtn {
+        border-radius: 10px;
+        width: min-content;
+        height: min-content;
+        padding: 1.2rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: $dark-900;
+        color: $gray-100;
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-family:  $font-inter;
+        letter-spacing: -0.04em;
+        line-height: 1.1em;
+        white-space: nowrap;
+
+        &.primaryBtn {
+          background: $primary-500;
+        }
+
+        &.fullWidth {
+          width: 100%;
+        }
+    }
+
     .hero {
       @include flexCenter;
       width: 100%;
@@ -34,6 +60,8 @@
 
         .heroTop {
           @include flexBetween;
+          align-items: flex-end;
+          justify-content: flex-end;
           width: 100%;
           gap: 2.4rem;
           padding: 0 4rem;
@@ -45,13 +73,20 @@
 
             h1 {
               @include h1;
-              width: 55%;
+              width: 65%;
             }
 
             p {
               @include paragraph;
-              width: 35%;
+              width: 45%;
             }
+          }
+
+          .actionButtons {
+            @include flexCenter;
+            gap: 0.8rem;
+
+                
           }
         }
 
@@ -176,6 +211,7 @@
 
         .sectionTop {
           @include flexBetween;
+          align-items: flex-end;
           justify-content: flex-end;
           width: 100%;
           gap: 1.6rem;
@@ -272,6 +308,7 @@
 
         .sectionTop {
           @include flexBetween;
+           align-items: flex-end;
           justify-content: flex-end;
           width: 100%;
           gap: 1.6rem;

@@ -29,6 +29,7 @@ import Feature3 from "@/public/images/Feature3.avif";
 import Feature4 from "@/public/images/Feature4.avif";
 import ArrowLeft from "@/public/icons/ArrowLeft";
 import ArrowRight from "@/public/icons/ArrowRight";
+import Button from "./components/ui/Button/Button";
 
 const features = [
   {
@@ -71,6 +72,11 @@ export default function Home() {
                   Connect with top companies and explore roles suited to your
                   skills and career goals.
                 </p>
+              </div>
+
+              <div className={styles.actionButtons}>
+                <Button variant="primary">Explore Roles</Button>
+                <Button>Hire talent</Button>
               </div>
             </div>
 
@@ -196,6 +202,7 @@ export default function Home() {
                     role with ease, through our streamlined process.
                   </p>
                 </div>
+                <Button variant="primary">View open roles</Button>
               </div>
 
               <Swiper
@@ -304,6 +311,8 @@ export default function Home() {
                     platform.
                   </p>
                 </div>
+
+                <Button variant="primary">Hire now</Button>
               </div>
 
               <div className={styles.recruitingFeaturesGrid}>
@@ -336,7 +345,8 @@ export default function Home() {
                     key={activeIndex}
                     src={features[activeIndex].image}
                     alt="feature"
-                    width={1280} height={896}
+                    width={1280}
+                    height={896}
                     priority
                   />
                 </div>
@@ -379,6 +389,9 @@ export default function Home() {
                   </div>
 
                   <div className={styles.action}>
+                    <Button variant="primary" fullWidth>
+                      View details
+                    </Button>
                     <p>Posted on Nov 26, 2024</p>
                   </div>
                 </div>
@@ -406,6 +419,9 @@ export default function Home() {
                   </div>
 
                   <div className={styles.action}>
+                    <Button variant="primary" fullWidth>
+                      View details
+                    </Button>
                     <p>Posted on Dec 20, 2024</p>
                   </div>
                 </div>
@@ -433,6 +449,9 @@ export default function Home() {
                   </div>
 
                   <div className={styles.action}>
+                    <Button variant="primary" fullWidth>
+                      View details
+                    </Button>
                     <p>Posted on Dec 30, 2024</p>
                   </div>
                 </div>
@@ -596,6 +615,9 @@ export default function Home() {
                       <p>Satisfaction</p>
                     </div>
                   </div>
+                  <Button variant="primary" fullWidth>
+                    View profile
+                  </Button>
                 </div>
 
                 <div className={styles.featuredRecruiterCard}>
@@ -621,6 +643,10 @@ export default function Home() {
                       <p>Satisfaction</p>
                     </div>
                   </div>
+
+                  <Button variant="primary" fullWidth>
+                    View profile
+                  </Button>
                 </div>
 
                 <div className={styles.featuredRecruiterCard}>
@@ -646,6 +672,10 @@ export default function Home() {
                       <p>Satisfaction</p>
                     </div>
                   </div>
+
+                  <Button variant="primary" fullWidth>
+                    View profile
+                  </Button>
                 </div>
               </div>
             </div>

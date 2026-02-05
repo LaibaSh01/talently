@@ -1,0 +1,72 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.header {
+  @include flexCenter;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 76%);
+  backdrop-filter: none;
+
+  .headerContent {
+    @include flexBetween;
+    width: 100%;
+    gap: 1rem;
+    max-width: 1200px;
+    height: min-content;
+    padding: 2rem 4rem;
+    margin: 0 auto;
+
+    > a {
+      font-weight: 600;
+      font-size: 2rem;
+      color: $gray-100;
+      font-family: $font-primary;
+      letter-spacing: -0.06em;
+      line-height: 1.1em;
+    }
+
+    nav {
+      @include flexCenter;
+      width: 100%;
+      gap: 1.6rem;
+
+      ul {
+        @include flexCenter;
+        gap: 1.6rem;
+
+        li {
+          a {
+            font-weight: 400;
+            font-size: 1.65rem;
+            color: $gray-100;
+            font-family: $font-primary;
+            letter-spacing: -0.06em;
+            line-height: 1.1em;
+          }
+        }
+      }
+    }
+
+    .darkBtn {
+      border-radius: 10px;
+      width: min-content;
+      height: min-content;
+      padding: 1.2rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: $dark-900;
+      color: $gray-100;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: $font-inter;
+      letter-spacing: -0.04em;
+      line-height: 1.1em;
+      white-space: nowrap;
+    }
+  }
+}
