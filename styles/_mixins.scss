@@ -1,49 +1,75 @@
-@import "./variables";
+@use "./variables" as *;
 
 // h1
 @mixin h1 {
   font-family: $font-primary;
-  font-size: $h1-size;
+  font-size: $h1-size-lg;
   font-weight: $h1-font-weight;
   line-height: $h1-line-height;
   letter-spacing: $h1-letter-spacing;
   color: $white;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: $h1-size-md;
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: $h1-size-sm;
+  }
 }
 
 // H2
 @mixin h2($color: $h2-text-light, $align: left) {
   font-family: $font-primary;
-  font-size: $h2-size;
+  font-size: $h2-size-lg;
   font-weight: $h2-font-weight;
   line-height: $h2-line-height;
   letter-spacing: $h2-letter-spacing;
   color: $color;
   text-align: $align;
+  @media only screen and (max-width: 1200px) {
+    font-size: $h2-size-md;
+  }
+  @media only screen and (max-width: 800px) {
+    font-size: $h2-size-sm;
+  }
 }
 
 // H3
 @mixin h3($color: $h3-text-light, $align: left) {
-    font-family: $font-primary;
-  font-size: $h3-size;
+  font-family: $font-primary;
+  font-size: $h3-size-lg;
   font-weight: $h3-font-weight;
   line-height: $h3-line-height;
   letter-spacing: $h3-letter-spacing;
   color: $color;
   text-align: $align;
+
+    @media only screen and (max-width: 1200px) {
+    font-size: $h3-size-md;
+  }
+
+    @media only screen and (max-width: 800px) {
+    font-size: $h3-size-sm;
+  }
 }
 
 // H4
 @mixin h4($color: $h4-text-light, $align: left) {
   font-family: $font-primary;
-  font-size: $h4-size;
+  font-size: $h4-size-lg;
   font-weight: $h4-font-weight;
   line-height: $h4-line-height;
   letter-spacing: $h4-letter-spacing;
   color: $color;
   text-align: $align;
+
+      @media only screen and (max-width: 1200px) {
+    font-size: $h4-size-md;
+  }
 }
 
-// H4 Centered – NEW
+// H4 Centered 
 @mixin h4-center {
   @include h4(center);
 }
@@ -68,6 +94,10 @@
   letter-spacing: $p-letter-spacing;
   color: $color;
   text-align: $align;
+
+  @media only screen and (max-width: 800px) {
+    font-size: $p-sm-font-size;
+  }
 }
 
 // Paragraph – small (16px)
@@ -141,11 +171,7 @@
   color: $color;
 }
 
-@mixin logo(
-  $size,
-  $color: $gray-100,
-  $hover-color: $gray-200
-) {
+@mixin logo($size, $color: $gray-100, $hover-color: $gray-200) {
   font-family: $font-primary;
   font-size: $size;
   font-weight: $fw-semibold;
@@ -155,7 +181,7 @@
   text-decoration: none;
   cursor: pointer;
 
-  transition: 
+  transition:
     color 0.25s ease,
     letter-spacing 0.25s ease,
     transform 0.25s ease;
@@ -164,7 +190,6 @@
     color: $hover-color;
   }
 }
-
 
 @mixin flexStart {
   display: flex;
@@ -187,8 +212,7 @@
   align-items: flex-end;
 }
 
-@mixin flexBetween
- {
+@mixin flexBetween {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -223,13 +247,12 @@
   align-items: flex-start;
 }
 
-
 @mixin container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 4rem;
-  border-left: 1px dashed rgba(255,255,255,0.2);
-  border-right: 1px dashed rgba(255,255,255,0.2);
+  border-left: 1px dashed rgba(255, 255, 255, 0.2);
+  border-right: 1px dashed rgba(255, 255, 255, 0.2);
   position: relative;
 }

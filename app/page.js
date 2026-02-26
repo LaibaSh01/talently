@@ -67,7 +67,7 @@ export default function Home() {
           <div className={`${styles.heroContent}`}>
             <div className={`${styles.heroTop}`}>
               <div className={`${styles.heading}`}>
-                <h1>Your gatway to remote tech carrers.</h1>
+                <h1>Your gateway to remote tech carrers.</h1>
                 <p>
                   Connect with top companies and explore roles suited to your
                   skills and career goals.
@@ -206,15 +206,12 @@ export default function Home() {
               </div>
 
               <Swiper
-                modules={[Navigation]}
+                // modules={[Navigation]}
                 spaceBetween={15}
                 slidesPerView={2}
-                // speed={1000}
-                // resistanceRatio={0.85}
-                // touchRatio={1.2}
-                 onBeforeInit={(swiper) => {
-                  swiper.params.navigation.prevEl = prevRef.current;
-                  swiper.params.navigation.nextEl = nextRef.current;
+                navigation={{
+                  prevEl: prevRef.current,
+                  nextEl: nextRef.current,
                 }}
                 breakpoints={{
                   0: {

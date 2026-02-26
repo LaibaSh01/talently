@@ -1,24 +1,43 @@
-@import "../../../styles/mixins";
-@import "../../../styles/variables";
+@use "../../../styles/mixins" as *;
+@use "../../../styles/variables" as *;
 
 .footer {
   width: 100%;
   position: relative;
   overflow: hidden;
+  padding: 0 4rem;
+
+  @media only screen and (max-width: 1200px) {
+    padding: 0 2rem;
+  }
 
   .footerContent {
     @include flexStartCol;
     width: 100%;
     gap: 8rem;
-    padding: 0 4rem;
+    padding: 10rem 0 0;
 
+    @media only screen and (max-width: 600px) {
+      padding: 6rem 0 0;
+    }
     .mainContent {
       @include flexBetween;
       width: 100%;
       gap: 1rem;
 
+      @media only screen and (max-width: 600px) {
+        @include flexStartCol;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+      }
+
       > a {
-         @include logo(11.2rem);
+        @include logo(11.2rem);
+
+        @media only screen and (max-width: 1200px) {
+          @include logo(7.6rem);
+        }
       }
 
       .linksGrid {
@@ -26,31 +45,40 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3.4rem;
 
-           ul {
-        @include flexStartCol;
-        gap: 1.6rem;
+        @media only screen and (max-width: 600px) {
+          gap: 2.5rem;
+        }
 
-        li {
-          a {
-            font-weight: 600;
-            font-size: 1.65rem;
-            color: $gray-100;
-            font-family: $font-primary;
-            letter-spacing: -0.06em;
-            line-height: 1.1em;
+        ul {
+          @include flexStartCol;
+          gap: 1.6rem;
+
+          @media only screen and (max-width: 600px) {
+            justify-content: center;
+            align-items: center;
+          }
+
+          li {
+            a {
+              font-weight: 600;
+              font-size: 1.4rem;
+              color: $gray-100;
+              font-family: $font-primary;
+              letter-spacing: -0.06em;
+              line-height: 1.1em;
+            }
           }
         }
       }
-      }
     }
 
-    > p{
-        width: 100%;
-        @include paragraph-sm($gray-300, center);
-        padding: 2rem 0;
-        font-weight: 600;
-        position: relative;
-        z-index: 1;
+    > p {
+      width: 100%;
+      @include paragraph-sm($gray-300, center);
+      padding: 2rem 0;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
     }
   }
 
@@ -62,6 +90,6 @@
     filter: blur(100px);
     left: -126px;
     bottom: -200px;
-              background-color: rgba(54, 94, 255, 0.7);
+    background-color: rgba(54, 94, 255, 0.7);
   }
 }

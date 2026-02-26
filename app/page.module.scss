@@ -1,5 +1,5 @@
-@import "../styles/variables";
-@import "../styles/mixins";
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
 
 .talently {
   width: 100%;
@@ -13,35 +13,40 @@
     overflow: hidden;
 
     .darkBtn {
-        border-radius: 10px;
-        width: min-content;
-        height: min-content;
-        padding: 1.2rem;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        background: $dark-900;
-        color: $gray-100;
-        font-size: 1.4rem;
-        font-weight: 600;
-        font-family:  $font-inter;
-        letter-spacing: -0.04em;
-        line-height: 1.1em;
-        white-space: nowrap;
+      border-radius: 10px;
+      width: min-content;
+      height: min-content;
+      padding: 1.2rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: $dark-900;
+      color: $gray-100;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: $font-inter;
+      letter-spacing: -0.04em;
+      line-height: 1.1em;
+      white-space: nowrap;
 
-        &.primaryBtn {
-          background: $primary-500;
-        }
+      &.primaryBtn {
+        background: $primary-500;
+      }
 
-        &.fullWidth {
-          width: 100%;
-        }
+      &.fullWidth {
+        width: 100%;
+      }
     }
 
     .hero {
       @include flexCenter;
       width: 100%;
       position: relative;
+      padding: 0 4rem;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 0 2rem;
+      }
 
       .heroContent {
         @include flexCenterCol;
@@ -58,6 +63,10 @@
         overflow: visible;
         z-index: 1;
 
+        @media only screen and (max-width: 800px) {
+          padding: 16rem 0 0;
+        }
+
         .heroTop {
           @include flexBetween;
           align-items: flex-end;
@@ -65,6 +74,15 @@
           width: 100%;
           gap: 2.4rem;
           padding: 0 4rem;
+
+          @media only screen and (max-width: 1200px) {
+            padding: 0 2rem;
+          }
+
+          @media only screen and (max-width: 1200px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
 
           .heading {
             @include flexStartCol;
@@ -74,19 +92,33 @@
             h1 {
               @include h1;
               width: 65%;
+
+              @media only screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
 
             p {
               @include paragraph;
               width: 45%;
+
+              @media only screen and (max-width: 1200px) {
+                width: 55%;
+              }
+
+              @media only screen and (max-width: 800px) {
+                width: 45%;
+              }
+
+              @media only screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
           }
 
           .actionButtons {
             @include flexCenter;
             gap: 0.8rem;
-
-                
           }
         }
 
@@ -202,12 +234,26 @@
     .process {
       width: 100%;
       position: relative;
+      padding: 0 4rem;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 0 2rem;
+      }
 
       .processContent {
         @include flexStartCol;
         width: 100%;
         padding: 20rem 0 10rem;
         gap: 4rem;
+
+        @media only screen and (max-width: 1200px) {
+          padding: 20rem 0 8rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+          padding: 4rem 0;
+          gap: 2.8rem;
+        }
 
         .sectionTop {
           @include flexBetween;
@@ -216,29 +262,71 @@
           width: 100%;
           gap: 1.6rem;
 
+          @media only screen and (max-width: 800px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
           .left {
             @include flexStartCol;
             width: 100%;
             gap: 1.6rem;
+
+            @media only screen and (max-width: 800px) {
+              @include flexCenterCol;
+            }
 
             .heading {
               @include flexStartCol;
               width: 100%;
               gap: 0.8rem;
 
+              @media only screen and (max-width: 800px) {
+                @include flexCenterCol;
+              }
+
               p {
                 @include paragraph-xs-gradient;
+
+                @media only screen and (max-width: 800px) {
+                  text-align: center;
+                }
               }
 
               h2 {
                 @include h2;
                 width: 50%;
+
+                @media only screen and (max-width: 1200px) {
+                  width: 65%;
+                }
+
+                @media only screen and (max-width: 800px) {
+                  text-align: center;
+                }
+
+                @media only screen and (max-width: 600px) {
+                  width: 100%;
+                }
               }
             }
 
             > p {
               @include paragraph;
               width: 40%;
+
+              @media only screen and (max-width: 1200px) {
+                width: 55%;
+              }
+
+              @media only screen and (max-width: 800px) {
+                text-align: center;
+              }
+
+              @media only screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
           }
         }
@@ -259,6 +347,10 @@
             background-color: $white-4;
             border: 1px solid $white-1;
             padding: 3.2rem;
+
+            @media only screen and (max-width: 600px) {
+              padding: 2rem;
+            }
 
             .top {
               @include flexStartCol;
@@ -299,6 +391,11 @@
     .recruiting {
       width: 100%;
       position: relative;
+      padding: 0 4rem;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 0 2rem;
+      }
 
       .recruitingContent {
         @include flexStartCol;
@@ -306,133 +403,200 @@
         padding: 10rem 0;
         gap: 4rem;
 
+        @media only screen and (max-width: 1200px) {
+          padding: 8rem 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+          padding: 4rem 0;
+        }
+
         .sectionTop {
           @include flexBetween;
-           align-items: flex-end;
+          align-items: flex-end;
           justify-content: flex-end;
           width: 100%;
           gap: 1.6rem;
+
+          @media only screen and (max-width: 800px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
 
           .left {
             @include flexStartCol;
             width: 100%;
             gap: 1.6rem;
 
+            @media only screen and (max-width: 800px) {
+              @include flexCenterCol;
+            }
+
             .heading {
               @include flexStartCol;
               width: 100%;
               gap: 0.8rem;
 
+              @media only screen and (max-width: 800px) {
+                @include flexCenterCol;
+              }
+
               p {
                 @include paragraph-xs-gradient;
+
+                @media only screen and (max-width: 800px) {
+                  text-align: center;
+                }
               }
 
               h2 {
                 @include h2;
                 width: 50%;
+
+                @media only screen and (max-width: 1200px) {
+                  width: 65%;
+                }
+
+                @media only screen and (max-width: 800px) {
+                  text-align: center;
+                }
+
+                @media only screen and (max-width: 600px) {
+                  width: 100%;
+                }
               }
             }
 
             > p {
               @include paragraph;
               width: 40%;
+
+              @media only screen and (max-width: 1200px) {
+                width: 60%;
+              }
+
+              @media only screen and (max-width: 800px) {
+                text-align: center;
+              }
+
+              @media only screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
           }
         }
 
         .recruitingFeaturesGrid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
-  align-items: center;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4.8rem;
+          align-items: center;
 
-  .featuresAccordionContainer {
-    @include flexStartCol;
-    width: 100%;
-    gap: 2.4rem;
+          @media only screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+          }
 
-    .featureAccordionItem {
-      cursor: pointer;
-      @include flexStartCol;
-      width: 100%;
-      // gap: 0.8rem;
+          .featuresAccordionContainer {
+            @include flexStartCol;
+            width: 100%;
+            gap: 2.4rem;
 
-      h3 {
-        @include h3;
-        padding: 0.6rem 0 2.4rem;
-        transition: color 0.3s ease;
-      }
+            .featureAccordionItem {
+              cursor: pointer;
+              @include flexStartCol;
+              width: 100%;
+              // gap: 0.8rem;
 
-      .answer {
-        display: grid;
-        grid-template-rows: 0fr;
-        overflow: hidden;
-        transition: grid-template-rows 0.45s ease, opacity 0.3s ease;
-        opacity: 0;
+              h3 {
+                @include h3;
+                padding: 0.6rem 0 2.4rem;
+                transition: color 0.3s ease;
+              }
 
-        p {
-          overflow: hidden;
-          @include paragraph-sm($gray-300, left);
+              .answer {
+                display: grid;
+                grid-template-rows: 0fr;
+                overflow: hidden;
+                transition:
+                  grid-template-rows 0.45s ease,
+                  opacity 0.3s ease;
+                opacity: 0;
+
+                p {
+                  overflow: hidden;
+                  @include paragraph-sm($gray-300, left);
+                }
+              }
+
+              &.active {
+                .answer {
+                  grid-template-rows: 1fr;
+                  opacity: 1;
+                  padding-bottom: 3rem;
+                }
+              }
+            }
+
+            .divider {
+              width: 100%;
+              height: 1px;
+              background-color: $white-1;
+            }
+          }
+
+          .imageWrapper {
+            position: relative;
+            width: 100%;
+            height: 440px;
+            border-radius: 12px;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              animation: fadeImage 0.45s ease;
+            }
+          }
         }
-      }
 
-      &.active {
-
-        .answer {
-          grid-template-rows: 1fr;
-          opacity: 1;
-          padding-bottom: 3rem;
+        @keyframes fadeImage {
+          from {
+            opacity: 0;
+            transform: scale(1.02);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
         }
-      }
-    }
-
-    .divider {
-      width: 100%;
-      height: 1px;
-      background-color: $white-1;
-    }
-  }
-
-  .imageWrapper {
-    position: relative;
-    width: 100%;
-    height: 440px;
-    border-radius: 12px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      animation: fadeImage 0.45s ease;
-    }
-  }
-}
-
-@keyframes fadeImage {
-  from {
-    opacity: 0;
-    transform: scale(1.02);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
       }
     }
 
     .roles {
       width: 100%;
       position: relative;
+      padding: 0 4rem;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 0 2rem;
+      }
 
       .rolesContent {
         @include flexCenterCol;
         width: 100%;
         padding: 10rem 0;
         gap: 4rem;
+
+        @media only screen and (max-width: 1200px) {
+          padding: 8rem 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+          padding: 4rem 0;
+        }
 
         .sectionTop {
           @include flexCenterCol;
@@ -452,6 +616,14 @@
               @include h2;
               width: 50%;
               text-align: center;
+
+              @media only screen and (max-width: 1200px) {
+                width: 65%;
+              }
+
+              @media only screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
           }
 
@@ -459,6 +631,14 @@
             @include paragraph;
             width: 40%;
             text-align: center;
+
+            @media only screen and (max-width: 1200px) {
+              width: 55%;
+            }
+
+            @media only screen and (max-width: 600px) {
+              width: 100%;
+            }
           }
         }
 
@@ -467,6 +647,14 @@
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 1.6rem;
+
+          @media only screen and (max-width: 1200px) {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          @media only screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+          }
 
           .featuredRoleCard {
             @include flexBetweenCol;
@@ -477,6 +665,20 @@
             gap: 1rem;
             background-color: $white-4;
             border: 1px solid $white-1;
+
+            @media only screen and (max-width: 600px) {
+              padding: 2rem;
+              min-height: 280px;
+            }
+
+            &:last-child {
+              @media only screen and (max-width: 1200px) {
+                display: none;
+              }
+              @media only screen and (max-width: 800px) {
+                display: flex;
+              }
+            }
 
             .featuredRoleInfo {
               @include flexStartCol;
@@ -490,6 +692,7 @@
 
                 .left {
                   @include flexCenter;
+                  justify-content: flex-start;
                   width: 100%;
                   gap: 1.4rem;
 
@@ -564,12 +767,24 @@
     .testimonial {
       width: 100%;
       position: relative;
+      padding: 0 4rem;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 0 2rem;
+      }
 
       .testimonialContent {
         @include flexCenterCol;
         width: 100%;
         padding: 10rem 0;
         gap: 4rem;
+
+        @media only screen and (max-width: 1200px) {
+          padding: 8rem 0;
+        }
+        @media only screen and (max-width: 600px) {
+          padding: 4rem 0;
+        }
 
         .sectionTop {
           @include flexCenterCol;
@@ -589,6 +804,10 @@
               @include h2;
               width: 40%;
               text-align: center;
+
+              @media only screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
           }
 
@@ -596,6 +815,14 @@
             @include paragraph;
             width: 40%;
             text-align: center;
+
+            @media only screen and (max-width: 1200px) {
+              width: 55%;
+            }
+
+            @media only screen and (max-width: 600px) {
+              width: 100%;
+            }
           }
         }
 
@@ -604,6 +831,10 @@
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 1.6rem;
+
+          @media only screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+          }
 
           .testimonialCard {
             @include flexBetweenCol;
@@ -622,6 +853,10 @@
               width: 100%;
               gap: 1.4rem;
 
+              @media only screen and (max-width: 600px) {
+                @include flexCenterCol;
+              }
+
               img {
                 border-radius: 1000px;
                 width: 64px;
@@ -636,6 +871,10 @@
                 width: 100%;
                 gap: 0.4rem;
 
+                @media only screen and (max-width: 600px) {
+                  @include flexCenterCol;
+                }
+
                 h5 {
                   @include h5;
                 }
@@ -649,6 +888,10 @@
             > p {
               @include paragraph;
               white-space: wrap;
+
+              @media only screen and (max-width: 600px) {
+                text-align: center;
+              }
             }
 
             .clientCompany {
@@ -656,11 +899,19 @@
               width: 100%;
               gap: 1.4rem;
 
+              @media only screen and (max-width: 600px) {
+                @include flexCenterCol;
+              }
+
               .left {
                 @include flexCenter;
                 width: 100%;
                 gap: 1.2rem;
                 justify-content: flex-start;
+
+                @media only screen and (max-width: 600px) {
+                  justify-content: center;
+                }
 
                 img {
                   width: auto;
@@ -680,6 +931,10 @@
                   @include h2;
                 }
 
+                @media only screen and (max-width: 600px) {
+                  @include flexCenterCol;
+                }
+
                 p {
                   @include paragraph-sm($p-sm-text-dark3);
                 }
@@ -693,12 +948,25 @@
     .recruiters {
       width: 100%;
       position: relative;
+      padding: 0 4rem;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 0 2rem;
+      }
 
       .recruitersContent {
         @include flexCenterCol;
         width: 100%;
         padding: 10rem 0;
         gap: 4rem;
+
+        @media only screen and (max-width: 1200px) {
+          padding: 8rem 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+          padding: 4rem 0 1.6rem;
+        }
 
         .sectionTop {
           @include flexCenterCol;
@@ -718,6 +986,14 @@
               @include h2;
               width: 50%;
               text-align: center;
+
+              @media only screen and (max-width: 1200px) {
+                width: 65%;
+              }
+
+              @media only screen and (max-width: 600px) {
+                width: 100%;
+              }
             }
           }
 
@@ -725,6 +1001,14 @@
             @include paragraph;
             width: 40%;
             text-align: center;
+
+            @media only screen and (max-width: 1200px) {
+              width: 55%;
+            }
+
+            @media only screen and (max-width: 600px) {
+              width: 100%;
+            }
           }
         }
 
@@ -733,6 +1017,14 @@
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 1.6rem;
+
+          @media only screen and (max-width: 1200px) {
+            grid-template-columns: 1fr 1fr;
+          }
+
+          @media only screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+          }
 
           .featuredRecruiterCard {
             @include flexStartCol;
@@ -743,11 +1035,19 @@
             background-color: $white-4;
             border: 1px solid $white-1;
 
+            @media only screen and (max-width: 600px) {
+              @include flexCenterCol;
+            }
+
             .top {
               @include flexCenter;
               width: 100%;
               justify-content: flex-start;
               gap: 1.4rem;
+
+              @media only screen and (max-width: 600px) {
+                @include flexCenterCol;
+              }
 
               img {
                 width: 64px;
@@ -760,6 +1060,10 @@
                 @include flexStartCol;
                 width: 100%;
                 gap: 0.4rem;
+
+                @media only screen and (max-width: 600px) {
+                  @include flexCenterCol;
+                }
 
                 h5 {
                   @include h5;

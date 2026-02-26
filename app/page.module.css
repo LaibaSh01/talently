@@ -3,11 +3,6 @@
 /* Grays */
 /* Dark Backgrounds */
 /* Brand / Primary */
-/* Base Colors */
-/* Transparent Whites */
-/* Grays */
-/* Dark Backgrounds */
-/* Brand / Primary */
 .talently {
   width: 100%;
   min-width: 100vw;
@@ -51,6 +46,12 @@
   align-items: center;
   width: 100%;
   position: relative;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .hero {
+    padding: 0 2rem;
+  }
 }
 .talently .main .hero .heroContent {
   display: flex;
@@ -70,6 +71,11 @@
   overflow: visible;
   z-index: 1;
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .hero .heroContent {
+    padding: 16rem 0 0;
+  }
+}
 .talently .main .hero .heroContent .heroTop {
   display: flex;
   flex-direction: row;
@@ -80,6 +86,17 @@
   width: 100%;
   gap: 2.4rem;
   padding: 0 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .hero .heroContent .heroTop {
+    padding: 0 2rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .hero .heroContent .heroTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .talently .main .hero .heroContent .heroTop .heading {
   display: flex;
@@ -96,7 +113,24 @@
   line-height: 1;
   letter-spacing: -0.04em;
   color: #ffffff;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .hero .heroContent .heroTop .heading h1 {
+    font-size: 4.8rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .hero .heroContent .heroTop .heading h1 {
+    font-size: 4rem;
+  }
+}
+.talently .main .hero .heroContent .heroTop .heading h1 {
   width: 65%;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .hero .heroContent .heroTop .heading h1 {
+    width: 100%;
+  }
 }
 .talently .main .hero .heroContent .heroTop .heading p {
   font-family: var(--font-inter);
@@ -106,7 +140,29 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .hero .heroContent .heroTop .heading p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .hero .heroContent .heroTop .heading p {
   width: 45%;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .hero .heroContent .heroTop .heading p {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .hero .heroContent .heroTop .heading p {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .hero .heroContent .heroTop .heading p {
+    width: 100%;
+  }
 }
 .talently .main .hero .heroContent .heroTop .actionButtons {
   display: flex;
@@ -193,6 +249,13 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .hero .heroContent .marqueeWrapper .heroTestimonial > p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .hero .heroContent .marqueeWrapper .heroTestimonial > p {
   white-space: wrap;
 }
 .talently .main .hero .heroContent .marqueeWrapper .heroTestimonial .clientCompany {
@@ -242,6 +305,16 @@
   color: #ffffff;
   text-align: left;
 }
+@media only screen and (max-width: 1200px) {
+  .talently .main .hero .heroContent .marqueeWrapper .heroTestimonial .clientCompany .rating h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .hero .heroContent .marqueeWrapper .heroTestimonial .clientCompany .rating h2 {
+    font-size: 3.2rem;
+  }
+}
 .talently .main .hero .heroContent .marqueeWrapper .heroTestimonial .clientCompany .rating p {
   font-family: var(--font-inter);
   font-size: 1.6rem;
@@ -265,6 +338,12 @@
 .talently .main .process {
   width: 100%;
   position: relative;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .process {
+    padding: 0 2rem;
+  }
 }
 .talently .main .process .processContent {
   display: flex;
@@ -274,6 +353,17 @@
   width: 100%;
   padding: 20rem 0 10rem;
   gap: 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .process .processContent {
+    padding: 20rem 0 8rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .process .processContent {
+    padding: 4rem 0;
+    gap: 2.8rem;
+  }
 }
 .talently .main .process .processContent .sectionTop {
   display: flex;
@@ -285,6 +375,13 @@
   width: 100%;
   gap: 1.6rem;
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .talently .main .process .processContent .sectionTop .left {
   display: flex;
   flex-direction: column;
@@ -293,6 +390,14 @@
   width: 100%;
   gap: 1.6rem;
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .talently .main .process .processContent .sectionTop .left .heading {
   display: flex;
   flex-direction: column;
@@ -300,6 +405,14 @@
   align-items: flex-start;
   width: 100%;
   gap: 0.8rem;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop .left .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .talently .main .process .processContent .sectionTop .left .heading p {
   font-family: var(--font-inter);
@@ -313,6 +426,11 @@
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(45deg, #365eff 0%, rgb(176, 192, 255) 100%);
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop .left .heading p {
+    text-align: center;
+  }
+}
 .talently .main .process .processContent .sectionTop .left .heading h2 {
   font-family: var(--font-plus-jakarta-sans);
   font-size: 4.4rem;
@@ -321,7 +439,34 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .process .processContent .sectionTop .left .heading h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop .left .heading h2 {
+    font-size: 3.2rem;
+  }
+}
+.talently .main .process .processContent .sectionTop .left .heading h2 {
   width: 50%;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .process .processContent .sectionTop .left .heading h2 {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop .left .heading h2 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .process .processContent .sectionTop .left .heading h2 {
+    width: 100%;
+  }
 }
 .talently .main .process .processContent .sectionTop .left > p {
   font-family: var(--font-inter);
@@ -331,7 +476,29 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop .left > p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .process .processContent .sectionTop .left > p {
   width: 40%;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .process .processContent .sectionTop .left > p {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .sectionTop .left > p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .process .processContent .sectionTop .left > p {
+    width: 100%;
+  }
 }
 .talently .main .process .processContent .processSwiperContainer {
   display: flex;
@@ -355,6 +522,11 @@
   background-color: rgba(255, 255, 255, 0.039);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 3.2rem;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .process .processContent .swiper .processCard {
+    padding: 2rem;
+  }
 }
 .talently .main .process .processContent .swiper .processCard .top {
   display: flex;
@@ -384,6 +556,16 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .process .processContent .swiper .processCard .top h3 {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .process .processContent .swiper .processCard .top h3 {
+    font-size: 2.4rem;
+  }
 }
 .talently .main .process .processContent .swiper .processCard > p {
   font-family: var(--font-inter);
@@ -416,6 +598,12 @@
 .talently .main .recruiting {
   width: 100%;
   position: relative;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiting {
+    padding: 0 2rem;
+  }
 }
 .talently .main .recruiting .recruitingContent {
   display: flex;
@@ -425,6 +613,16 @@
   width: 100%;
   padding: 10rem 0;
   gap: 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiting .recruitingContent {
+    padding: 8rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiting .recruitingContent {
+    padding: 4rem 0;
+  }
 }
 .talently .main .recruiting .recruitingContent .sectionTop {
   display: flex;
@@ -436,6 +634,13 @@
   width: 100%;
   gap: 1.6rem;
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .talently .main .recruiting .recruitingContent .sectionTop .left {
   display: flex;
   flex-direction: column;
@@ -444,6 +649,14 @@
   width: 100%;
   gap: 1.6rem;
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .talently .main .recruiting .recruitingContent .sectionTop .left .heading {
   display: flex;
   flex-direction: column;
@@ -451,6 +664,14 @@
   align-items: flex-start;
   width: 100%;
   gap: 0.8rem;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .talently .main .recruiting .recruitingContent .sectionTop .left .heading p {
   font-family: var(--font-inter);
@@ -464,6 +685,11 @@
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(45deg, #365eff 0%, rgb(176, 192, 255) 100%);
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left .heading p {
+    text-align: center;
+  }
+}
 .talently .main .recruiting .recruitingContent .sectionTop .left .heading h2 {
   font-family: var(--font-plus-jakarta-sans);
   font-size: 4.4rem;
@@ -472,7 +698,34 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left .heading h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left .heading h2 {
+    font-size: 3.2rem;
+  }
+}
+.talently .main .recruiting .recruitingContent .sectionTop .left .heading h2 {
   width: 50%;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left .heading h2 {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left .heading h2 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left .heading h2 {
+    width: 100%;
+  }
 }
 .talently .main .recruiting .recruitingContent .sectionTop .left > p {
   font-family: var(--font-inter);
@@ -482,7 +735,29 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left > p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .recruiting .recruitingContent .sectionTop .left > p {
   width: 40%;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left > p {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left > p {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiting .recruitingContent .sectionTop .left > p {
+    width: 100%;
+  }
 }
 .talently .main .recruiting .recruitingContent .recruitingFeaturesGrid {
   width: 100%;
@@ -490,6 +765,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 4.8rem;
   align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .recruitingFeaturesGrid {
+    grid-template-columns: 1fr;
+  }
 }
 .talently .main .recruiting .recruitingContent .recruitingFeaturesGrid .featuresAccordionContainer {
   display: flex;
@@ -515,6 +795,18 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiting .recruitingContent .recruitingFeaturesGrid .featuresAccordionContainer .featureAccordionItem h3 {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiting .recruitingContent .recruitingFeaturesGrid .featuresAccordionContainer .featureAccordionItem h3 {
+    font-size: 2.4rem;
+  }
+}
+.talently .main .recruiting .recruitingContent .recruitingFeaturesGrid .featuresAccordionContainer .featureAccordionItem h3 {
   padding: 0.6rem 0 2.4rem;
   transition: color 0.3s ease;
 }
@@ -572,6 +864,12 @@
 .talently .main .roles {
   width: 100%;
   position: relative;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles {
+    padding: 0 2rem;
+  }
 }
 .talently .main .roles .rolesContent {
   display: flex;
@@ -581,6 +879,16 @@
   width: 100%;
   padding: 10rem 0;
   gap: 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles .rolesContent {
+    padding: 8rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .roles .rolesContent {
+    padding: 4rem 0;
+  }
 }
 .talently .main .roles .rolesContent .sectionTop {
   display: flex;
@@ -618,8 +926,30 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles .rolesContent .sectionTop .heading h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .roles .rolesContent .sectionTop .heading h2 {
+    font-size: 3.2rem;
+  }
+}
+.talently .main .roles .rolesContent .sectionTop .heading h2 {
   width: 50%;
   text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles .rolesContent .sectionTop .heading h2 {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .roles .rolesContent .sectionTop .heading h2 {
+    width: 100%;
+  }
 }
 .talently .main .roles .rolesContent .sectionTop > p {
   font-family: var(--font-inter);
@@ -629,14 +959,41 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .roles .rolesContent .sectionTop > p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .roles .rolesContent .sectionTop > p {
   width: 40%;
   text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles .rolesContent .sectionTop > p {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .roles .rolesContent .sectionTop > p {
+    width: 100%;
+  }
 }
 .talently .main .roles .rolesContent .featuredRoles {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.6rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles .rolesContent .featuredRoles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .roles .rolesContent .featuredRoles {
+    grid-template-columns: 1fr;
+  }
 }
 .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard {
   display: flex;
@@ -650,6 +1007,22 @@
   gap: 1rem;
   background-color: rgba(255, 255, 255, 0.039);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard {
+    padding: 2rem;
+    min-height: 280px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard:last-child {
+    display: flex;
+  }
 }
 .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard .featuredRoleInfo {
   display: flex;
@@ -672,6 +1045,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
   width: 100%;
   gap: 1.4rem;
 }
@@ -700,6 +1074,11 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard .featuredRoleInfo .companyInfo .left h4 {
+    font-size: 2rem;
+  }
 }
 .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard .featuredRoleInfo .companyInfo .featuredChip {
   display: flex;
@@ -753,6 +1132,11 @@
   color: #bababa;
   text-align: left;
 }
+@media only screen and (max-width: 800px) {
+  .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard .featuredRoleInfo .roleInfo p {
+    font-size: 1.6rem;
+  }
+}
 .talently .main .roles .rolesContent .featuredRoles .featuredRoleCard .action {
   display: flex;
   flex-direction: column;
@@ -773,6 +1157,12 @@
 .talently .main .testimonial {
   width: 100%;
   position: relative;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .testimonial {
+    padding: 0 2rem;
+  }
 }
 .talently .main .testimonial .testimonialContent {
   display: flex;
@@ -782,6 +1172,16 @@
   width: 100%;
   padding: 10rem 0;
   gap: 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .testimonial .testimonialContent {
+    padding: 8rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent {
+    padding: 4rem 0;
+  }
 }
 .talently .main .testimonial .testimonialContent .sectionTop {
   display: flex;
@@ -819,8 +1219,25 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .testimonial .testimonialContent .sectionTop .heading h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .testimonial .testimonialContent .sectionTop .heading h2 {
+    font-size: 3.2rem;
+  }
+}
+.talently .main .testimonial .testimonialContent .sectionTop .heading h2 {
   width: 40%;
   text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .sectionTop .heading h2 {
+    width: 100%;
+  }
 }
 .talently .main .testimonial .testimonialContent .sectionTop > p {
   font-family: var(--font-inter);
@@ -830,14 +1247,36 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .testimonial .testimonialContent .sectionTop > p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .testimonial .testimonialContent .sectionTop > p {
   width: 40%;
   text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .testimonial .testimonialContent .sectionTop > p {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .sectionTop > p {
+    width: 100%;
+  }
 }
 .talently .main .testimonial .testimonialContent .testimonialContainer {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.6rem;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer {
+    grid-template-columns: 1fr;
+  }
 }
 .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard {
   display: flex;
@@ -862,6 +1301,14 @@
   width: 100%;
   gap: 1.4rem;
 }
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientInfoContainer img {
   border-radius: 1000px;
   width: 64px;
@@ -879,6 +1326,14 @@
   align-items: flex-start;
   width: 100%;
   gap: 0.4rem;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientInfoContainer .clientInfoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientInfoContainer .clientInfoText h5 {
   font-family: var(--font-plus-jakarta-sans);
@@ -906,7 +1361,19 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard > p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard > p {
   white-space: wrap;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard > p {
+    text-align: center;
+  }
 }
 .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany {
   display: flex;
@@ -916,6 +1383,14 @@
   width: 100%;
   gap: 1.4rem;
 }
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany .left {
   display: flex;
   flex-direction: row;
@@ -924,6 +1399,11 @@
   width: 100%;
   gap: 1.2rem;
   justify-content: flex-start;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany .left {
+    justify-content: center;
+  }
 }
 .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany .left img {
   width: auto;
@@ -955,6 +1435,24 @@
   color: #ffffff;
   text-align: left;
 }
+@media only screen and (max-width: 1200px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany .rating h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany .rating h2 {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany .rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .talently .main .testimonial .testimonialContent .testimonialContainer .testimonialCard .clientCompany .rating p {
   font-family: var(--font-inter);
   font-size: 1.6rem;
@@ -967,6 +1465,12 @@
 .talently .main .recruiters {
   width: 100%;
   position: relative;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiters {
+    padding: 0 2rem;
+  }
 }
 .talently .main .recruiters .recruitersContent {
   display: flex;
@@ -976,6 +1480,16 @@
   width: 100%;
   padding: 10rem 0;
   gap: 4rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiters .recruitersContent {
+    padding: 8rem 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiters .recruitersContent {
+    padding: 4rem 0 1.6rem;
+  }
 }
 .talently .main .recruiters .recruitersContent .sectionTop {
   display: flex;
@@ -1013,8 +1527,30 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiters .recruitersContent .sectionTop .heading h2 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiters .recruitersContent .sectionTop .heading h2 {
+    font-size: 3.2rem;
+  }
+}
+.talently .main .recruiters .recruitersContent .sectionTop .heading h2 {
   width: 50%;
   text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiters .recruitersContent .sectionTop .heading h2 {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiters .recruitersContent .sectionTop .heading h2 {
+    width: 100%;
+  }
 }
 .talently .main .recruiters .recruitersContent .sectionTop > p {
   font-family: var(--font-inter);
@@ -1024,14 +1560,41 @@
   letter-spacing: -0.04em;
   color: #c2c2c2;
   text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiters .recruitersContent .sectionTop > p {
+    font-size: 1.6rem;
+  }
+}
+.talently .main .recruiters .recruitersContent .sectionTop > p {
   width: 40%;
   text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiters .recruitersContent .sectionTop > p {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiters .recruitersContent .sectionTop > p {
+    width: 100%;
+  }
 }
 .talently .main .recruiters .recruitersContent .featuredRecruiters {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.6rem;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiters .recruitersContent .featuredRecruiters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .talently .main .recruiters .recruitersContent .featuredRecruiters {
+    grid-template-columns: 1fr;
+  }
 }
 .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard {
   display: flex;
@@ -1045,6 +1608,14 @@
   background-color: rgba(255, 255, 255, 0.039);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard .top {
   display: flex;
   flex-direction: row;
@@ -1053,6 +1624,14 @@
   width: 100%;
   justify-content: flex-start;
   gap: 1.4rem;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard .top img {
   width: 64px;
@@ -1068,6 +1647,14 @@
   align-items: flex-start;
   width: 100%;
   gap: 0.4rem;
+}
+@media only screen and (max-width: 600px) {
+  .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard .top .clientInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard .top .clientInfo h5 {
   font-family: var(--font-plus-jakarta-sans);
@@ -1109,6 +1696,11 @@
   letter-spacing: -0.04em;
   color: #ffffff;
   text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard .recruiterBackground .recruiterBgInfo h4 {
+    font-size: 2rem;
+  }
 }
 .talently .main .recruiters .recruitersContent .featuredRecruiters .featuredRecruiterCard .recruiterBackground .recruiterBgInfo p {
   font-family: var(--font-inter);

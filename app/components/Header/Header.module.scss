@@ -1,5 +1,5 @@
-@import "../../../styles/mixins";
-@import "../../../styles/variables";
+@use "../../../styles/mixins" as *;
+@use "../../../styles/variables" as *;
 
 .header {
   @include flexCenter;
@@ -14,14 +14,14 @@
   .headerContent {
     @include flexBetween;
     width: 100%;
-    gap: 1rem;
     max-width: 1200px;
-    height: min-content;
     padding: 2rem 4rem;
     margin: 0 auto;
+    gap: 1rem;
 
     > a {
       @include logo(2rem);
+      z-index: 1001;
     }
 
     nav {
@@ -29,39 +29,108 @@
       width: 100%;
       gap: 1.6rem;
 
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
+
       ul {
         @include flexCenter;
         gap: 2.2rem;
 
         li {
           a {
-            font-weight: 400;
-            font-size: 1.65rem;
+            font-weight: 500;
+            font-size: 1.4rem;
             color: $gray-100;
             font-family: $font-primary;
             letter-spacing: -0.06em;
             line-height: 1.1em;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+              opacity: 0.7;
+            }
           }
         }
       }
     }
 
-    .darkBtn {
-      border-radius: 10px;
-      width: min-content;
-      height: min-content;
-      padding: 1.2rem;
+    button {
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+
+    .menuToggle {
+      display: none;
       cursor: pointer;
-      border: none;
-      outline: none;
-      background: $dark-900;
-      color: $gray-100;
-      font-size: 1.4rem;
-      font-weight: 600;
-      font-family: $font-inter;
-      letter-spacing: -0.04em;
-      line-height: 1.1em;
-      white-space: nowrap;
+      z-index: 1001;
+      transition: transform 0.4s ease;
+
+      @media only screen and (max-width: 800px) {
+        display: block;
+      }
+
+      &.active {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(
+      180deg,
+      var(--token-8fb4c88a-f890-47d1-a562-5340f673647a, rgb(0, 0, 0)) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    overflow: hidden;
+    z-index: 998;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    transition: height 0.5s ease;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2.8rem;
+      text-align: center;
+
+      li {
+        a {
+          font-size: 2.6rem;
+          font-family: $font-primary;
+          color: $gray-100;
+          letter-spacing: -0.04em;
+          transition: opacity 0.3s ease;
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    button {
+      margin-top: 2rem;
+    }
+
+    &.open {
+      height: 100vh;
+    }
+
+    @media only screen and (min-width: 801px) {
+      display: none;
     }
   }
 }

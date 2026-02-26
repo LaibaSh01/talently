@@ -10,10 +10,10 @@ export default function ArrowLeft() {
       <path
         d="M11.2528 14.9425L6.36281 10.0525C5.78531 9.475 5.78531 8.53 6.36281 7.9525L11.2528 3.0625"
         stroke="white"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
